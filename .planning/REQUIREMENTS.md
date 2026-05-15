@@ -24,15 +24,15 @@
 - [x] **COMP-01**: After file selection, prompt "Compress?" with Yes/No
 - [x] **COMP-02**: If Yes, prompt "Format: gz or xz?" (two options)
 - [x] **COMP-03**: If No, create plain .tar file
-- [x] **COMP-04**: Create correct extension: .tar, .tar.gz, or .tar.xz
+- [x] **COMP-04**: Create correct extension: .tar, .tar.gz (xz removed - no native Node.js support)
 
 ### Extraction (Unzip Mode)
 
-- [ ] **UNZIP-01**: Accept .tar, .tar.gz, .tar.xz, .gz files as input
-- [ ] **UNZIP-02**: List archive contents before extracting
-- [ ] **UNZIP-03**: Detect if files have common top-level prefix (e.g., "myproject/")
-- [ ] **UNZIP-04**: If no common prefix, extract to new folder named after archive
-- [ ] **UNZIP-05**: If common prefix exists, extract normally to current directory
+- [x] **UNZIP-01**: Accept .tar, .tar.gz, .gz files as input (xz removed - no native support)
+- [x] **UNZIP-02**: List archive contents before extracting
+- [x] **UNZIP-03**: Detect if files have common top-level prefix (e.g., "myproject/")
+- [x] **UNZIP-04**: If no common prefix, extract to new folder named after archive
+- [x] **UNZIP-05**: If common prefix exists, extract normally to current directory
 
 ### Error Handling
 
@@ -69,11 +69,11 @@
 | COMP-02 | Phase 2 | ✓ Complete |
 | COMP-03 | Phase 2 | ✓ Complete |
 | COMP-04 | Phase 2 | ✓ Complete |
-| UNZIP-01 | Phase 3 | Pending |
-| UNZIP-02 | Phase 3 | Pending |
-| UNZIP-03 | Phase 3 | Pending |
-| UNZIP-04 | Phase 3 | Pending |
-| UNZIP-05 | Phase 3 | Pending |
+| UNZIP-01 | Phase 3 | ✓ Complete |
+| UNZIP-02 | Phase 3 | ✓ Complete |
+| UNZIP-03 | Phase 3 | ✓ Complete |
+| UNZIP-04 | Phase 3 | ✓ Complete |
+| UNZIP-05 | Phase 3 | ✓ Complete |
 | ERR-01 | Phase 1 | Pending |
 | ERR-02 | Phase 1 | Pending |
 | ERR-03 | Phase 1 | Pending |

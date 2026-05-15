@@ -18,9 +18,9 @@ Make archive operations effortless — users can zip multiple files or unzip arc
 
 - [ ] btar CLI tool runs as standalone command
 - [ ] Interactive file picker UI for zip mode (2-column grid, search, multiselect)
-- [ ] Compression prompt: none / gz / xz
-- [ ] Create .tar, .tar.gz, or .tar.xz archives
-- [ ] Extract .tar, .tar.gz, .tar.xz, .gz files
+- [x] Compression prompt: none / gz (xz removed - no native Node.js support)
+- [x] Create .tar, .tar.gz archives
+- [x] Extract .tar, .tar.gz, .gz files
 - [ ] Smart extraction: detect common top-level prefix, extract to folder if missing
 
 ### Out of Scope

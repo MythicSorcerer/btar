@@ -36,8 +36,8 @@
 3. Arrow keys + space select multiple files
 4. Enter confirms selection, Escape cancels
 5. "Compress?" prompt appears after selection
-6. "gz or xz?" prompt appears if compress = yes
-7. Creates .tar, .tar.gz, or .tar.xz based on choice
+6. "gz or xz?" prompt appears if compress = yes (xz disabled - no native support)
+7. Creates .tar or .tar.gz based on choice
 8. Creates plain .tar if compress = no
 
 ---
@@ -56,7 +56,7 @@
 2. Detects common top-level prefix in archive
 3. Creates subfolder if files have no common prefix
 4. Extracts normally when common prefix exists
-5. Handles .tar, .tar.gz, .tar.xz, .gz formats
+5. Handles .tar, .tar.gz, .gz formats (xz removed - no native Node.js support)
 
 ---
 

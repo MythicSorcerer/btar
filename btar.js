@@ -137,7 +137,12 @@ async function main() {
         // Validate archive exists
         await validateFileExists(archivePath);
 
-        console.log(`Extracting: ${archivePath}`);
+        // List archive contents before extracting
+        console.log(`Contents of ${archivePath}:`);
+        const listResult = await listArchive(archivePath);
+        console.log(listResult);
+
+        console.log('\nExtracting...');
         const result = await extractArchive(archivePath);
         console.log(result);
         break;

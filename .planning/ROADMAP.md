@@ -48,6 +48,9 @@
 
 **Requirements:** UNZIP-01, UNZIP-02, UNZIP-03, UNZIP-04, UNZIP-05
 
+**Plans:**
+- [x] 03-01-PLAN.md — Smart extraction with prefix detection and folder creation
+
 **Success Criteria:**
 1. Lists archive contents before extracting
 2. Detects common top-level prefix in archive

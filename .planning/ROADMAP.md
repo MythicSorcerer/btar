@@ -8,6 +8,9 @@
 
 **Requirements:** CORE-01, CORE-02, CORE-03, ERR-01, ERR-02, ERR-03
 
+**Plans:**
+- [ ] 01-01-PLAN.md — Create working btar CLI tool with create/extract/list and error handling
+
 **Success Criteria:**
 1. `btar` command is executable from PATH
 2. Running `btar file1 file2` creates archive

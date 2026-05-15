@@ -1,0 +1,7 @@
+.planning/
+*.md
+test-*.tar
+no-prefix/
+test*.txt
+corrupted.tar
+archive.tar

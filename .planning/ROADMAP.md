@@ -27,6 +27,9 @@
 
 **Requirements:** PICK-01, PICK-02, PICK-03, PICK-04, PICK-05, COMP-01, COMP-02, COMP-03, COMP-04
 
+**Plans:**
+- [x] 02-01-PLAN.md — Interactive file picker with compression prompts
+
 **Success Criteria:**
 1. Files displayed in 2-column grid when no args given
 2. Search filter filters visible files

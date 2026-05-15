@@ -8,6 +8,8 @@ import { createArchive, extractArchive, listArchive } from './lib/archive.js';
 import { FileNotFoundError, ArchiveError, PermissionError, handleError, validateFileExists } from './lib/errors.js';
 import { createReadStream } from 'node:fs';
 import { stat } from 'node:fs/promises';
+import { runPicker } from './lib/picker.js';
+import { promptCompression, promptFormat, determineExtension, getOutputPath } from './lib/compression.js';
 
 const args = process.argv.slice(2);
 
@@ -44,8 +46,13 @@ function detectMode(args) {
     return 'list';
   }
 
-  // No arguments - show error (ERR-01)
+  // No arguments - check for interactive mode
   if (args.length === 0) {
+    // If stdin is a TTY, use interactive mode
+    if (process.stdin.isTTY) {
+      return 'interactive';
+    }
+    // Otherwise show error (ERR-01)
     return 'error:no-args';
   }
 
@@ -79,6 +86,36 @@ async function main() {
 
   try {
     switch (mode) {
+      case 'interactive': {
+        // Run the interactive file picker
+        const selectedFiles = await runPicker();
+        
+        // Handle cancellation
+        if (!selectedFiles || selectedFiles.length === 0) {
+          console.log('No files selected. Exiting.');
+          process.exit(0);
+        }
+
+        console.log(`Selected ${selectedFiles.length} file(s)`);
+
+        // Prompt for compression
+        const compressed = await promptCompression(selectedFiles);
+        
+        let format = 'gz';
+        if (compressed) {
+          format = await promptFormat();
+        }
+
+        // Determine extension and output path
+        const extension = determineExtension(compressed, format);
+        const outputPath = getOutputPath(selectedFiles, extension);
+
+        console.log(`Creating archive: ${outputPath}`);
+        const result = await createArchive(selectedFiles, outputPath);
+        console.log(result);
+        break;
+      }
+
       case 'create': {
         const files = args;
         const outputPath = 'archive.tar';

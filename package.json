@@ -1,6 +1,6 @@
 {
   "name": "btar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "User-friendly CLI tool for creating and extracting archive files",
   "type": "module",
   "main": "btar.js",

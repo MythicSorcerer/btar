@@ -18,7 +18,7 @@ See: .planning/PROJECT.md (updated 2025-05-15)
 |-------|--------|-------|----------|
 | 1: CLI Core | ✓ Complete | 1/1 | 100% |
 | 2: Interactive Picker & Compression | ✓ Complete | 1/1 | 100% |
-| 3: Smart Extraction | ○ Pending | 0/1 | 0% |
+| 3: Smart Extraction | ✓ Complete | 1/1 | 100% |
 
 ## Milestones
 

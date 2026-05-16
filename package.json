@@ -1,6 +1,6 @@
 {
   "name": "better-tar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "User-friendly CLI tool for creating and extracting archive files",
   "type": "module",
   "main": "btar.js",

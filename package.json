@@ -1,13 +1,19 @@
 {
-  "name": "btar",
+  "name": "better-tar",
   "version": "1.0.1",
   "description": "User-friendly CLI tool for creating and extracting archive files",
   "type": "module",
   "main": "btar.js",
   "bin": {
-    "btar": "./btar.js"
+    "btar": "btar.js"
   },
-  "keywords": ["tar", "archive", "cli", "extract", "zip"],
+  "keywords": [
+    "tar",
+    "archive",
+    "cli",
+    "extract",
+    "zip"
+  ],
   "author": "",
   "license": "MIT"
 }
